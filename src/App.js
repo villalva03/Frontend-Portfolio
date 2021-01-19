@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import NavBar from './components/navBar/navBar';
+import './components/navBar/navBar.css';
 import './App.css';
+import Home from './components/home/home';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Francisco Villalva"
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavBar />
+        <div className="body">
+          <Home />
+        </div>
+        <footer className="footer">
+          <p>Puedes seguirme en <a href="https://twitter.com/villalva0310" rel="noreferrer" target="_blank">Twitter</a> y <a href="https://github.com/villalva03" rel="noreferrer" target="_blank">GitHub</a>. Además, aquí está mi <a href="mailto:villalva03@gmail.com" rel="noreferrer" target="_blank">Email</a> y <a href="https://www.linkedin.com/in/francisco-villalva" rel="noreferrer" target="_blank">LinkedIn</a>.</p>
+        </footer>
     </div>
   );
 }
