@@ -9,7 +9,7 @@ function Portfolio() {
     useEffect(() => {
         axios({
           method: 'GET',
-          url: 'http://localhost:8080/portfolio'
+          url: process.env.REACT_APP_URL_PORTFOLIO
         })
         .then(res => {
           setPortfolio(res.data); 

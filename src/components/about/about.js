@@ -12,7 +12,7 @@ function About() {
     useEffect(() => {
         axios({
           method: 'GET',
-          url: 'http://localhost:8080/about'
+          url: process.env.REACT_APP_URL_ABOUT
         })
         .then(res => {
           setAbout(res.data[0]); 
