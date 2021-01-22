@@ -1,10 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './components/navBar/navBar';
 import './components/navBar/navBar.css';
 import './App.css';
 import Home from './components/home/home';
+import axios from 'axios';
 
 function App() {
+
+  const [about, setAbout] = useState({});
+
+    useEffect(() => {
+        axios({
+          method: 'GET',
+          url: 'http://localhost:8080/about'
+        })
+        .then(res => {
+          setAbout(res.data[0]); 
+        })
+      }, [])
 
   useEffect(() => {
     document.title = "Francisco Villalva"
@@ -14,10 +27,14 @@ function App() {
     <div className="App">
         <NavBar />
         <div className="body">
-          <Home />
+          <Home 
+            name={about.name}  
+            profession={about.profession}
+            avatar={about.photo}
+          />
         </div>
         <footer className="footer">
-          <p>Puedes seguirme en <a href="https://twitter.com/villalva0310" rel="noreferrer" target="_blank">Twitter</a> y <a href="https://github.com/villalva03" rel="noreferrer" target="_blank">GitHub</a>. Además, aquí está mi <a href="mailto:villalva03@gmail.com" rel="noreferrer" target="_blank">Email</a> y <a href="https://www.linkedin.com/in/francisco-villalva" rel="noreferrer" target="_blank">LinkedIn</a>.</p>
+          <p>Puedes seguirme en <a href={about.twitter} rel="noreferrer" target="_blank">Twitter</a> y <a href={about.github} rel="noreferrer" target="_blank">GitHub</a>. Además, aquí está mi <a href={`mailto:${about.mail}`} rel="noreferrer" target="_blank">Email</a> y <a href={about.linkedin} rel="noreferrer" target="_blank">LinkedIn</a>.</p>
         </footer>
     </div>
   );
