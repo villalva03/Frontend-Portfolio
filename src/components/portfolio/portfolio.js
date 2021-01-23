@@ -44,6 +44,17 @@ function Portfolio() {
                         <div className="content">
                             <strong><h1>{portfolio.nameProject}</h1></strong>
                             <p>{portfolio.description}</p>
+                            <div className="technology">
+                                {portfolio.icons && portfolio.icons.map((icons, index) =>
+                                    <img key={index} className="imgSTech" src={icons} alt="icons"></img>
+                                )}
+
+
+                                {/*<img className="imgSTech" src={portfolio.iconCss}></img>
+                                <img className="imgSTech" src={portfolio.iconReact}></img>
+                                <img className="imgSTech" src={portfolio.iconMaterialUi}></img>
+                                <img className="imgTech" src={portfolio.iconGit}></img>*/}
+                            </div>
                             <div className="btnGroup">
                                 <a href={portfolio.link} rel="noreferrer" target="_blank" className="btnPreview">
                                     <strong>Preview</strong>

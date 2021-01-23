@@ -1,6 +1,11 @@
 import React from 'react';
 import './home.css';
 
+// "iconCss": "https://icongr.am/devicon/css3-original-wordmark.svg",
+        // "iconReact": "https://icongr.am/devicon/react-original-wordmark.svg",
+        // "iconGit": "https://icongr.am/devicon/git-original.svg",
+        // "iconMaterialUi": "https://material-ui.com/static/logo.png"
+
 function Home({ name, profession, avatar }) {
     return(
         <div className="contentHome">
