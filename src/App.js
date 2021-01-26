@@ -20,7 +20,7 @@ function App() {
       }, [])
 
   useEffect(() => {
-    document.title = "Francisco Villalva"
+    document.title = "Francisco Villalva - Portfolio"
   }, []);
 
   return (
