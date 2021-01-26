@@ -51,7 +51,13 @@ function About() {
                     </div>
                 </div>
                 <div className="contentSkill">
-                    <h1>Skill</h1>
+                    <h1>Stack</h1>
+                    <p>Estas son las tecnologías que utilizo en mis proyectos:</p>
+                    <div className="contentImage">
+                    {about.skillIcons && about.skillIcons.map((skillIcons, index) =>
+                        <img key={index} className="imgSkill" src={skillIcons} alt="skill-icons"></img>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

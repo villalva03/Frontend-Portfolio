@@ -27,11 +27,7 @@ function App() {
     <div className="App">
         <NavBar />
         <div className="body">
-          <Home 
-            name={about.name}  
-            profession={about.profession}
-            avatar={about.photo}
-          />
+          <Home />
         </div>
         <footer className="footer">
           <p>Puedes seguirme en <a href={about.twitter} rel="noreferrer" target="_blank">Twitter</a> y <a href={about.github} rel="noreferrer" target="_blank">GitHub</a>. Además, aquí está mi <a href={`mailto:${about.mail}`} rel="noreferrer" target="_blank">Email</a> y <a href={about.linkedin} rel="noreferrer" target="_blank">LinkedIn</a>.</p>

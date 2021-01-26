@@ -41,7 +41,11 @@ function Navbar(){
                         <div className="portfolio">Portfolio</div>
                     </Link>
                 </li>
-                <li><div className="contact">Contacto</div></li>
+                <li>
+                    <Link to="/contact">
+                        <div className="contact">Contacto</div>
+                    </Link>
+                </li>
             </ul>
         </nav>
     );

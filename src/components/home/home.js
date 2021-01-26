@@ -1,12 +1,8 @@
 import React from 'react';
 import './home.css';
+import avatar from '../../avatar.jpg'
 
-// "iconCss": "https://icongr.am/devicon/css3-original-wordmark.svg",
-        // "iconReact": "https://icongr.am/devicon/react-original-wordmark.svg",
-        // "iconGit": "https://icongr.am/devicon/git-original.svg",
-        // "iconMaterialUi": "https://material-ui.com/static/logo.png"
-
-function Home({ name, profession, avatar }) {
+function Home() {
     return(
         <div className="contentHome">
             <div className="avatar">
@@ -16,8 +12,8 @@ function Home({ name, profession, avatar }) {
             </div>
             <div className="name">
                 <h3>Hola, soy</h3>
-                <h1>{name}</h1>
-                <h2>{profession}</h2>
+                <h1>Francisco Villalva</h1>
+                <h2>Front-End Developer</h2>
             </div>
         </div>
     );

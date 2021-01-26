@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from "./App";
 import About from "./components/about/about";
 import Portfolio from "./components/portfolio/portfolio";
+import Contact from "./components/contact/contact";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Route exact path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/portfolio" component={Portfolio}></Route>
+        <Route path="/contact" component={Contact}></Route>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
