@@ -115,3 +115,9 @@
     margin-top: 20px;
     padding-right: 10px;
   }
+
+  @media screen and (max-width: 688px) {
+    .myPortfolio {
+      min-height: 162vh;
+    }
+  }
